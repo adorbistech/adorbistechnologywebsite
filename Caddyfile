@@ -1,0 +1,83 @@
+# Adorbis Technology — Caddy web server config
+#
+# INITIAL DEPLOY: uses subdomain for safe testing before DNS cutover.
+# Replace `new.adorbistechnology.com` with `adorbistechnology.com, www.adorbistechnology.com` once verified.
+#
+# See docs/DEPLOYMENT.md for the full sequence.
+
+new.adorbistechnology.com {
+    root * /var/www/adorbistech/pages
+    file_server
+    encode gzip zstd
+
+    # Clean URLs: /about serves pages/about.html, /industries serves pages/industries.html
+    try_files {path} {path}.html {path}/index.html
+
+    # Security headers
+    header {
+        Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+        X-Content-Type-Options "nosniff"
+        X-Frame-Options "SAMEORIGIN"
+        Referrer-Policy "strict-origin-when-cross-origin"
+        Permissions-Policy "geolocation=(), microphone=(), camera=()"
+    }
+
+    # Cache images and static assets for 1 year
+    @assets {
+        path /assets/*
+    }
+    header @assets Cache-Control "public, max-age=31536000, immutable"
+
+    # Cache HTML for 1 hour (short, so updates propagate fast)
+    @html {
+        path *.html
+        path /
+    }
+    header @html Cache-Control "public, max-age=3600"
+
+    # Custom 404 page (optional — create pages/404.html later)
+    handle_errors {
+        @404 expression {http.error.status_code} == 404
+        respond @404 "Page not found" 404
+    }
+
+    # Log access for debugging (comment out in production if noisy)
+    log {
+        output file /var/log/caddy/adorbistech-access.log
+        format console
+    }
+}
+
+# ======================================================================
+# PRODUCTION CONFIG — uncomment and replace the block above once subdomain
+# test passes AND you're ready to flip the DNS on the apex domain.
+# ======================================================================
+#
+# adorbistechnology.com, www.adorbistechnology.com {
+#     root * /var/www/adorbistech/pages
+#     file_server
+#     encode gzip zstd
+#     try_files {path} {path}.html {path}/index.html
+#
+#     # Redirect www → apex
+#     @www host www.adorbistechnology.com
+#     redir @www https://adorbistechnology.com{uri} permanent
+#
+#     header {
+#         Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+#         X-Content-Type-Options "nosniff"
+#         X-Frame-Options "SAMEORIGIN"
+#         Referrer-Policy "strict-origin-when-cross-origin"
+#         Permissions-Policy "geolocation=(), microphone=(), camera=()"
+#     }
+#
+#     @assets {
+#         path /assets/*
+#     }
+#     header @assets Cache-Control "public, max-age=31536000, immutable"
+#
+#     log {
+#         output file /var/log/caddy/adorbistech-access.log
+#         format console
+#     }
+# }

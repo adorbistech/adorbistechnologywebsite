@@ -1,0 +1,475 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Contact — AdorbisTech</title>
+<meta name="description" content="Contact AdorbisTech. Email, phone, office address, hours. One email, one reply, one call.">
+<meta name="author" content="Adorbis Technology Pvt Ltd">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Contact — AdorbisTech">
+<meta property="og:description" content="Contact AdorbisTech. Email, phone, office address, hours. One email, one reply, one call.">
+<meta property="og:site_name" content="AdorbisTech">
+<link rel="icon" type="image/png" href="/assets/images/adorbis-cosmic-a.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&family=Nunito:wght@300;400;500;600;700;800&display=swap">
+<style>
+:root{
+  --bg:#05060A; --bg-2:#0A0B12;
+  --ink:#EDEEF2; --ink-dim:#8A8FA3; --ink-faint:#4A4E5E;
+  --line:rgba(255,255,255,0.08); --line-2:rgba(255,255,255,0.14);
+  --violet:oklch(0.62 0.22 295); --indigo:oklch(0.55 0.22 265); --cyan:oklch(0.82 0.15 210);
+  /* Adorbis brand dual-color (from wordmark: silver "ador" + electric blue "bis") */
+  --adorbis-silver:#C8CDD6; --adorbis-silver-hi:#EEF2F8;
+  --adorbis-blue:#1A9DFF; --adorbis-blue-hi:#4FB9FF; --adorbis-blue-deep:#0A6FB8;
+  --adorbis-grad:linear-gradient(90deg, #C8CDD6 0%, #EEF2F8 45%, #4FB9FF 55%, #1A9DFF 100%);
+  --adorbis-grad-vertical:linear-gradient(180deg, #EEF2F8 0%, #4FB9FF 100%);
+  --ease:cubic-bezier(0.16,1,0.3,1);
+  --mono:'JetBrains Mono',ui-monospace,monospace;
+  --sans:'Nunito',-apple-system,system-ui,sans-serif;
+  --serif:'Instrument Serif','Times New Roman',serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-weight:400;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body{font-size:16px;line-height:1.6;letter-spacing:-0.005em}
+a{color:inherit;text-decoration:none}
+img,svg{display:block;max-width:100%}
+::selection{background:var(--cyan);color:#000}
+
+.bg-layer{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+.bg-grid{position:absolute;inset:-20%;background-image:linear-gradient(to right,rgba(255,255,255,0.035) 1px,transparent 1px),linear-gradient(to bottom,rgba(255,255,255,0.035) 1px,transparent 1px);background-size:64px 64px;mask-image:radial-gradient(ellipse 60% 80% at 50% 30%,black 30%,transparent 80%)}
+.bg-orb{position:absolute;border-radius:50%;filter:blur(100px);opacity:0.5;mix-blend-mode:screen}
+.bg-orb.a{width:720px;height:720px;left:-240px;top:-280px;background:radial-gradient(closest-side,oklch(0.55 0.22 265) 0%,transparent 70%);animation:float1 22s var(--ease) infinite alternate}
+.bg-orb.b{width:600px;height:600px;right:-180px;top:10vh;background:radial-gradient(closest-side,oklch(0.62 0.22 295) 0%,transparent 70%);animation:float2 28s var(--ease) infinite alternate}
+@keyframes float1{to{transform:translate(140px,80px) scale(1.15)}}
+@keyframes float2{to{transform:translate(-120px,120px) scale(0.9)}}
+
+main{position:relative;z-index:1}
+.wrap{max-width:1180px;margin:0 auto;padding:0 32px}
+section{position:relative}
+.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--ink-dim);display:inline-flex;align-items:center;gap:10px}
+.eyebrow::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--adorbis-blue-hi);box-shadow:0 0 12px var(--adorbis-blue-hi)}
+
+h1,h2,h3{font-family:var(--serif);font-weight:400;letter-spacing:-0.02em;line-height:1.05}
+h1{font-size:clamp(44px,6vw,84px);line-height:1}
+h2{font-size:clamp(32px,4vw,52px);margin-top:8px}
+h3{font-size:clamp(22px,2.2vw,30px)}
+.accent{background:var(--adorbis-grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+/* Adorbis brand utility classes */
+.brand-accent{background:var(--adorbis-grad);-webkit-background-clip:text;background-clip:text;color:transparent;font-weight:700}
+.brand-glow{filter:drop-shadow(0 0 18px rgba(79,185,255,0.35))}
+.brand-btn-primary{background:var(--adorbis-grad);color:#05060A;box-shadow:0 10px 40px -10px rgba(79,185,255,0.5),inset 0 -1px 0 rgba(0,0,0,0.2);font-weight:600}
+.brand-btn-primary:hover{transform:translateY(-2px);box-shadow:0 18px 50px -10px rgba(79,185,255,0.65)}
+
+nav.top{position:fixed;top:16px;left:50%;transform:translateX(-50%);z-index:50;display:flex;align-items:center;gap:24px;padding:10px 14px 10px 14px;border:1px solid var(--line);border-radius:999px;background:rgba(10,11,18,0.7);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px)}
+nav.top .logo{display:flex;align-items:center;gap:10px}
+nav.top .logo .mark{width:28px;height:28px;background-size:contain;background-position:center;background-repeat:no-repeat;filter:drop-shadow(0 0 10px rgba(79,185,255,0.4));flex-shrink:0}
+nav.top .logo .wordmark{height:28px;width:auto;display:block}
+nav.top ul.menu{display:flex;gap:18px;list-style:none;font-size:13px;color:var(--ink-dim);font-weight:500}
+nav.top ul.menu a:hover{color:var(--ink)}
+nav.top .back-btn{padding:8px 14px;border-radius:999px;background:var(--adorbis-grad);color:#05060A;font-size:13px;font-weight:600;transition:transform .3s var(--ease);white-space:nowrap;box-shadow:0 6px 18px -6px rgba(79,185,255,0.4)}
+nav.top .back-btn:hover{transform:translateY(-1px);box-shadow:0 10px 24px -6px rgba(79,185,255,0.55)}
+@media(max-width:920px){nav.top ul.menu{display:none}nav.top .logo .wordmark{height:22px}}
+
+.mob-toggle{display:none;width:32px;height:24px;flex-direction:column;justify-content:space-between;cursor:pointer;background:none;border:none;padding:0}
+.mob-toggle span{width:100%;height:2px;background:var(--ink);transition:transform .3s var(--ease)}
+.mob-menu{display:none;position:fixed;top:80px;left:16px;right:16px;z-index:49;padding:24px;border:1px solid var(--line-2);border-radius:18px;background:rgba(10,11,18,0.96);backdrop-filter:blur(18px)}
+.mob-menu ul{list-style:none}
+.mob-menu li{padding:10px 0;border-bottom:1px solid var(--line)}
+.mob-menu li:last-child{border-bottom:none}
+.mob-menu a{display:block;font-size:15px;color:var(--ink)}
+.mob-menu.open{display:block}
+@media(max-width:920px){.mob-toggle{display:flex}}
+
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 24px;border-radius:999px;font-size:14px;font-weight:500;letter-spacing:-0.01em;transition:transform .35s var(--ease),box-shadow .35s var(--ease)}
+.btn-primary{background:var(--adorbis-grad);color:#05060A;box-shadow:0 12px 42px -10px rgba(79,185,255,0.4),inset 0 -1px 0 rgba(0,0,0,0.2);font-weight:600}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 20px 52px -10px rgba(79,185,255,0.55)}
+.btn-ghost{border:1px solid var(--line-2);color:var(--ink);background:rgba(255,255,255,0.02)}
+.btn-ghost:hover{background:rgba(255,255,255,0.06);transform:translateY(-2px)}
+.btn .arrow{transition:transform .3s var(--ease)}
+.btn:hover .arrow{transform:translate(3px,-3px)}
+
+.phero{padding:160px 0 80px;position:relative;text-align:center}
+.phero .pill{display:inline-flex;align-items:center;gap:10px;padding:6px 14px 6px 8px;border:1px solid var(--line-2);border-radius:999px;font-family:var(--mono);font-size:11px;letter-spacing:0.06em;color:var(--ink-dim);background:rgba(255,255,255,0.02);margin-bottom:28px}
+.phero .pill .dot{width:18px;height:18px;border-radius:50%;background:radial-gradient(circle at 35% 30%,var(--adorbis-silver-hi),var(--adorbis-blue));box-shadow:0 0 16px rgba(79,185,255,0.6)}
+.phero h1{max-width:1000px;margin:0 auto}
+.phero .sub{max-width:720px;margin:28px auto 0;font-size:clamp(16px,1.4vw,19px);color:var(--ink-dim)}
+.phero .ctas{display:flex;gap:12px;justify-content:center;margin-top:36px;flex-wrap:wrap}
+
+.content{padding:60px 0 100px}
+.content .lede{font-size:20px;line-height:1.6;color:var(--ink-dim);margin-bottom:40px;max-width:820px}
+.content h2{margin:64px 0 24px}
+.content h2:first-child{margin-top:0}
+.content h3{margin:40px 0 16px;color:var(--ink)}
+.content p{margin-bottom:20px;color:var(--ink-dim);max-width:820px}
+.content p strong{color:var(--ink);font-weight:500}
+.content ul{list-style:none;margin:20px 0 28px;padding:0;max-width:820px}
+.content ul li{position:relative;padding-left:24px;margin-bottom:10px;color:var(--ink-dim)}
+.content ul li::before{content:"";position:absolute;left:0;top:11px;width:8px;height:1px;background:var(--cyan)}
+.content .divider{height:1px;background:var(--line);margin:64px 0;border:none}
+
+.fgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin:32px 0}
+.fcard{padding:28px;border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,0.02);transition:border-color .3s var(--ease),transform .3s var(--ease)}
+.fcard:hover{border-color:var(--line-2);transform:translateY(-2px)}
+.fcard .fnum{font-family:var(--mono);font-size:11px;letter-spacing:0.1em;color:var(--ink-faint);margin-bottom:12px}
+.fcard h3{font-size:22px;margin-bottom:10px}
+.fcard p{font-size:14px;color:var(--ink-dim);line-height:1.55;margin:0}
+
+.ind-row{padding:56px 0;border-top:1px solid var(--line);display:grid;grid-template-columns:1fr 2fr;gap:56px;align-items:start}
+.ind-row:first-of-type{border-top:none;padding-top:24px}
+.ind-row .ind-left .ind-num{font-family:var(--mono);font-size:11px;letter-spacing:0.18em;color:var(--ink-faint);margin-bottom:12px}
+.ind-row .ind-left h3{font-size:clamp(26px,2.6vw,36px)}
+.ind-row .ind-left .ind-ico{width:56px;height:56px;border:1px solid var(--line-2);border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:20px;color:var(--cyan)}
+.ind-row .ind-right p{margin-bottom:16px}
+.ind-row .ind-right .ind-pains{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0}
+.ind-row .ind-right .ind-pains span{font-family:var(--mono);font-size:11px;letter-spacing:0.05em;padding:5px 10px;border:1px solid var(--line);border-radius:6px;color:var(--ink-dim);background:rgba(255,255,255,0.02)}
+.ind-row .ind-right h4{font-size:12px;font-family:var(--mono);letter-spacing:0.16em;text-transform:uppercase;color:var(--ink-faint);margin:20px 0 12px}
+@media(max-width:820px){.ind-row{grid-template-columns:1fr;gap:28px}}
+
+.finalcta{padding:80px 0 120px}
+.finalbox{border:1px solid var(--line-2);border-radius:24px;padding:64px 32px;text-align:center;background:radial-gradient(ellipse at top,rgba(124,92,255,0.08),transparent 60%);max-width:900px;margin:0 auto}
+.finalbox h2{font-size:clamp(36px,4.5vw,56px);margin:18px 0 20px}
+.finalbox p{max-width:620px;margin:0 auto 32px;color:var(--ink-dim);font-size:17px}
+.finalbox .ctas{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+
+footer{border-top:1px solid var(--line);padding:64px 0 32px;margin-top:60px;position:relative;z-index:1}
+.foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:48px;margin-bottom:48px}
+.foot-brand .brand-lockup{display:flex;align-items:center;gap:14px;margin-bottom:18px}
+.foot-brand .brand-lockup .mark{width:40px;height:40px;background-size:contain;background-position:center;background-repeat:no-repeat;filter:drop-shadow(0 0 12px rgba(79,185,255,0.35));flex-shrink:0}
+.foot-brand .brand-lockup .wordmark{height:28px;width:auto;display:block}
+.foot-brand h4{font-family:var(--mono);font-size:11px;letter-spacing:0.16em;margin-bottom:14px;color:var(--ink-dim);text-transform:uppercase;font-weight:500}
+.foot-brand p{font-size:13px;color:var(--ink-dim);line-height:1.6;margin-bottom:16px;max-width:340px}
+.foot-brand .badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.foot-brand .badges span{font-family:var(--mono);font-size:10px;letter-spacing:0.1em;padding:4px 8px;border:1px solid var(--line);border-radius:4px;color:var(--ink-faint);text-transform:uppercase}
+.foot-brand .badges span.primary{border-color:var(--adorbis-blue-hi);color:var(--adorbis-blue-hi)}
+.foot-col h5{font-family:var(--mono);font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:16px;font-weight:500}
+.foot-col ul{list-style:none}
+.foot-col li{margin-bottom:10px}
+.foot-col a{font-size:13px;color:var(--ink-dim);transition:color .2s}
+.foot-col a:hover{color:var(--ink)}
+.foot-bottom{padding-top:32px;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;font-family:var(--mono);font-size:11px;letter-spacing:0.05em;color:var(--ink-faint)}
+.foot-bottom .entities{display:flex;gap:16px;flex-wrap:wrap}
+.foot-bottom .social a{display:inline-flex;align-items:center;gap:6px;color:var(--ink-dim);transition:color .2s;margin-left:14px}
+.foot-bottom .social a:hover{color:var(--cyan)}
+@media(max-width:780px){.foot-grid{grid-template-columns:1fr 1fr;gap:32px}.foot-brand{grid-column:span 2}}
+@media(max-width:480px){.foot-grid{grid-template-columns:1fr}.foot-brand{grid-column:span 1}}
+
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+
+/* ================ MOBILE OPTIMIZATION ================ */
+@media(max-width:920px){
+  /* Nav - hide desktop menu, show hamburger */
+  nav.top ul.menu{display:none}
+  nav.top{gap:12px;padding:8px 10px 8px 14px;max-width:calc(100vw - 24px);top:12px}
+  nav.top .logo{font-size:11px;gap:8px}
+  nav.top .logo .mark{width:22px;height:22px}
+  nav.top .back-btn{padding:7px 11px;font-size:12px}
+}
+
+@media(max-width:720px){
+  html,body{font-size:15px}
+  .wrap{padding:0 18px}
+  
+  /* Hero padding reduced */
+  .phero{padding:120px 0 50px}
+  .phero .pill{font-size:10px;padding:5px 12px 5px 7px;margin-bottom:20px}
+  .phero h1{font-size:clamp(36px,9vw,54px);line-height:1.05}
+  .phero .sub{font-size:15px;margin-top:20px}
+  .phero .ctas{margin-top:28px;gap:10px}
+  
+  /* Buttons - ensure 44px min touch target */
+  .btn{padding:13px 20px;font-size:13px;min-height:44px}
+  .btn.btn-ghost{padding:12px 18px}
+  
+  /* Landing hero specific */
+  .hero{padding:120px 0 50px}
+  .hero h1{font-size:clamp(38px,10vw,56px)}
+  .hero .metrics{margin-top:56px;grid-template-columns:1fr 1fr}
+  .hero .metric{padding:16px 14px;border-right:none;border-bottom:1px solid var(--line)}
+  .hero .metric:nth-child(odd){border-right:1px solid var(--line)}
+  .hero .metric:nth-last-child(-n+2){border-bottom:none}
+  .hero .metric .k{font-size:32px}
+  .hero .metric .v{font-size:10px}
+  
+  /* Section heads stack */
+  .sec-head{grid-template-columns:1fr;gap:16px;margin-bottom:36px}
+  .sec-head h2,h2{font-size:clamp(28px,7vw,36px)}
+  h3{font-size:clamp(20px,5vw,24px)}
+  
+  /* Content */
+  .content{padding:40px 0 60px}
+  .content .lede{font-size:17px;margin-bottom:28px}
+  .content h2{margin:40px 0 16px}
+  .content h3{margin:28px 0 12px}
+  .content ul li{font-size:14px}
+  .content .divider{margin:40px 0}
+  
+  /* Cards grids */
+  .fgrid{grid-template-columns:1fr;gap:12px}
+  .fcard{padding:22px}
+  .fcard h3{font-size:19px}
+  
+  /* Capabilities grid on landing */
+  .cap-grid{grid-template-columns:1fr;gap:12px}
+  .cap,.cap.featured,.cap.wide{grid-column:span 1;padding:24px}
+  .cap h3{font-size:22px}
+  
+  /* Trust stack */
+  .trust-stack{grid-template-columns:1fr;gap:12px}
+  .trust-stack .ts-item{padding:24px 20px}
+  
+  /* NDA promise */
+  .nda-promise .ndp-grid{grid-template-columns:1fr;gap:28px}
+  .nda-promise .seal{padding:36px 20px}
+  .nda-promise .seal p{font-size:20px}
+  
+  /* Engagement framework */
+  .framework .fw-item{grid-template-columns:40px 1fr;gap:16px;padding:16px}
+  .framework .fw-num{font-size:24px}
+  .framework .fw-content h4{font-size:15px}
+  
+  /* Process steps */
+  .steps{grid-template-columns:1fr;gap:14px}
+  .step{padding:24px}
+  
+  /* Industries rows */
+  .ind-row{grid-template-columns:1fr;gap:20px;padding:40px 0}
+  .ind-row .ind-left .ind-ico{width:48px;height:48px;margin-bottom:16px}
+  
+  /* Final CTA */
+  .finalcta{padding:60px 0 80px}
+  .finalbox{padding:40px 20px}
+  .finalbox h2{font-size:clamp(28px,7vw,40px)}
+  .finalbox p{font-size:15px}
+  
+  /* Footer - stack to single column */
+  footer{padding:48px 0 24px;margin-top:40px}
+  .foot-grid{grid-template-columns:1fr;gap:32px;margin-bottom:32px}
+  .foot-brand{grid-column:span 1}
+  .foot-brand p{max-width:100%}
+  .foot-bottom{flex-direction:column;align-items:flex-start;gap:16px;padding-top:24px}
+  .foot-bottom .entities{flex-direction:column;gap:6px}
+  .foot-bottom .entities span:nth-child(2){display:none}
+  .foot-bottom .social{display:flex;gap:8px}
+  .foot-bottom .social a{margin-left:0;margin-right:14px}
+  
+  /* Background effects reduce on mobile for performance */
+  .bg-orb{opacity:0.3;filter:blur(80px)}
+  .bg-grid{background-size:48px 48px}
+  
+  /* Mobile menu: make it properly touchable */
+  .mob-menu{top:72px;left:12px;right:12px;padding:20px;max-height:calc(100vh - 100px);overflow-y:auto}
+  .mob-menu li{padding:12px 0}
+  .mob-menu a{font-size:16px;padding:4px 0}
+}
+
+@media(max-width:420px){
+  .wrap{padding:0 14px}
+  .phero h1{font-size:clamp(32px,9vw,44px)}
+  .hero h1{font-size:clamp(34px,10vw,48px)}
+  .hero .metric .k{font-size:28px}
+  nav.top{padding:7px 9px 7px 11px;gap:8px}
+  nav.top .logo{font-size:10px}
+  .btn{font-size:12px;padding:12px 16px}
+  .fcard{padding:18px}
+  .cap{padding:20px}
+}
+</style>
+</head>
+<body>
+
+<div class="bg-layer" aria-hidden="true">
+  <div class="bg-grid"></div>
+  <div class="bg-orb a"></div>
+  <div class="bg-orb b"></div>
+</div>
+
+
+<nav class="top">
+  <a href="https://www.adorbistechnology.com/" class="logo" aria-label="Adorbis — back to home">
+    <img src="/assets/images/adorbis-wordmark.png" alt="Adorbis" class="wordmark" />
+  </a>
+  <ul class="menu">
+    <li><a href="about.html">About</a></li>
+    <li><a href="industries.html">Industries</a></li>
+    <li><a href="ecommerce.html">eCommerce</a></li>
+    <li><a href="clients.html">Trust</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <button class="mob-toggle" id="mobToggle" aria-label="Open menu"><span></span><span></span><span></span></button>
+  <a href="https://www.adorbistechnology.com/" class="back-btn">← Home</a>
+</nav>
+<div class="mob-menu" id="mobMenu">
+  <ul>
+    <li><a href="https://www.adorbistechnology.com/">← Back to Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="industries.html">Industries</a></li>
+    <li><a href="clients.html">Trust &amp; NDA</a></li>
+    <li style="padding-top:16px;opacity:0.5;font-family:var(--mono);font-size:11px;letter-spacing:0.16em;text-transform:uppercase">AI Services</li>
+    <li><a href="model-training.html">Model Training</a></li>
+    <li><a href="workflow-automation.html">Workflow Automation</a></li>
+    <li><a href="private-llms.html">Private LLMs</a></li>
+    <li><a href="ai-infrastructure.html">AI Infrastructure</a></li>
+    <li><a href="ai-enhancement.html">AI Software Enhancement</a></li>
+    <li style="padding-top:16px;opacity:0.5;font-family:var(--mono);font-size:11px;letter-spacing:0.16em;text-transform:uppercase">Development</li>
+    <li><a href="ecommerce.html">eCommerce</a></li>
+    <li><a href="saas.html">SaaS Applications</a></li>
+    <li style="padding-top:16px;opacity:0.5;font-family:var(--mono);font-size:11px;letter-spacing:0.16em;text-transform:uppercase">Company</li>
+    <li><a href="process.html">Process</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</div>
+
+
+<main>
+
+<section class="phero">
+  <div class="wrap">
+    <div class="pill reveal"><span class="dot"></span> COMPANY · CONTACT</div>
+    <h1 class="reveal">Start the<br/><em style="color:var(--ink-dim);font-style:italic">conversation.</em></h1>
+    <p class="sub reveal">One email, one reply within 24 hours, one 30-minute call to see if we're a fit. No forms, no chatbots, no marketing funnel.</p>
+    <div class="ctas reveal">
+      <a href="mailto:info@adorbistech.com" class="btn btn-primary">Book AI Consultation <span class="arrow">↗</span></a>
+      <a href="https://www.adorbistechnology.com/" class="btn btn-ghost">← Back to Home</a>
+    </div>
+  </div>
+</section>
+
+<section class="content">
+  <div class="wrap">
+    <h2 class="reveal">Email</h2>
+    <p class="reveal" style="font-size:24px;font-family:var(--serif)"><a href="mailto:info@adorbistech.com" style="color:var(--ink);border-bottom:1px solid var(--cyan);padding-bottom:4px">info@adorbistech.com</a></p>
+    <p class="reveal">Send a short note describing your use case, data sources, and timeline. We reply within 24 hours (Mon–Fri, IST). If we can't help, we'll tell you and often point you to someone who can.</p>
+
+    <h2 class="reveal">Office</h2>
+    <p class="reveal"><strong>Adorbis Technology Pvt Ltd</strong><br/>
+    1st floor, Hitech City Rd<br/>
+    Kondapur, Hyderabad – 500084<br/>
+    Telangana, India</p>
+
+    <h2 class="reveal">Phone</h2>
+    <p class="reveal"><a href="tel:+916301644963" style="color:var(--ink)">+91 63016 44963</a></p>
+
+    <h2 class="reveal">Hours</h2>
+    <ul class="reveal">
+      <li><strong>Monday – Friday:</strong> 11:00 AM – 6:00 PM IST</li>
+      <li><strong>Saturday:</strong> 11:30 AM – 4:00 PM IST</li>
+      <li><strong>Sunday:</strong> Closed</li>
+    </ul>
+    <p class="reveal">For clients outside IST, most of our engagements include a weekly standup scheduled in your timezone.</p>
+
+    <h2 class="reveal">What happens after you email</h2>
+    <ul class="reveal">
+      <li><strong>Within 24 hours:</strong> A short reply from a real person — usually with 2–3 clarifying questions</li>
+      <li><strong>Within a week:</strong> A 30-minute discovery call to walk through your use case, data, and constraints</li>
+      <li><strong>Within 2 weeks of the call:</strong> A scoped proposal with fixed price and timeline for Phase 01, or an honest "not a fit right now" with a referral</li>
+    </ul>
+
+    <h2 class="reveal">We intentionally don't have a contact form</h2>
+    <p class="reveal">Contact forms are where intent goes to die. We'd rather you send us an email with real context — even if it's three lines — than fill out boxes that force you to pick from a dropdown that doesn't match your situation.</p>
+  </div>
+</section>
+
+<section class="finalcta">
+  <div class="wrap">
+    <div class="finalbox reveal">
+      <div class="eyebrow" style="justify-content:center;display:inline-flex">START HERE</div>
+      <h2>Write us an email.<br/><em style="color:var(--ink-dim);font-style:italic">That's the whole form.</em></h2>
+      <p>Describe your use case in a few sentences. We'll read it and reply with a real response from a real engineer — not a canned marketing template.</p>
+      <div class="ctas">
+        <a href="mailto:info@adorbistech.com" class="btn btn-primary">Email info@adorbistech.com <span class="arrow">↗</span></a>
+        <a href="https://www.adorbistechnology.com/" class="btn btn-ghost">← Back to Home</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <div class="brand-lockup">
+          <div class="mark" style="background-image:url(/assets/images/adorbis-cosmic-a.png)"></div>
+          <img src="/assets/images/adorbis-wordmark.png" alt="Adorbis" class="wordmark" />
+        </div>
+        <h4>AI Infrastructure · NDA-First</h4>
+        <p>AI model training, workflow automation and private LLM deployment for businesses that don't compromise on data control. Plus AI-native eCommerce and SaaS development.</p>
+        <p style="font-size:12px"><a href="mailto:info@adorbistech.com" style="color:var(--ink)">info@adorbistech.com</a></p>
+        <div class="badges">
+          <span class="primary">DPIIT DIPP52616</span>
+          <span>NDA-First</span>
+          <span>Wix Partner</span>
+          <span>Shopify Partner</span>
+          <span>Since 2019</span>
+        </div>
+      </div>
+      <div class="foot-col">
+        <h5>AI Services</h5>
+        <ul>
+          <li><a href="model-training.html">Model Training</a></li>
+          <li><a href="workflow-automation.html">Workflow Automation</a></li>
+          <li><a href="private-llms.html">Private LLMs</a></li>
+          <li><a href="ai-infrastructure.html">AI Infrastructure</a></li>
+          <li><a href="ai-enhancement.html">Software Enhancement</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h5>Development</h5>
+        <ul>
+          <li><a href="ecommerce.html">eCommerce</a></li>
+          <li><a href="saas.html">SaaS Applications</a></li>
+          <li><a href="industries.html">Industries</a></li>
+          <li><a href="process.html">Process</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="clients.html">Trust &amp; NDA</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="security.html">Security</a></li>
+          <li><a href="privacy.html">Privacy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <div class="entities">
+        <span>© 2026 Adorbis Technology Pvt Ltd · Hyderabad, India</span>
+        <span>·</span>
+        <span>Adorbis LLC · Sheridan, Wyoming, USA</span>
+      </div>
+      <div class="social">
+        <a href="https://www.linkedin.com/in/syed-suhail-dastgir-a216633b/" target="_blank" rel="noopener" title="LinkedIn">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3v9zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"/></svg>
+          LinkedIn
+        </a>
+        <a href="https://discord.com/channels/1364237875918405776/1365904437385887814" target="_blank" rel="noopener" title="Discord">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 00-4.885-1.515.074.074 0 00-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 00-5.487 0 12.64 12.64 0 00-.617-1.25.077.077 0 00-.079-.037A19.736 19.736 0 003.677 4.37a.07.07 0 00-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 00.031.057 19.9 19.9 0 005.993 3.03.078.078 0 00.084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 00-.041-.106 13.107 13.107 0 01-1.872-.892.077.077 0 01-.008-.128 10.2 10.2 0 00.372-.292.074.074 0 01.077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 01.078.01c.12.098.246.198.373.292a.077.077 0 01-.006.127 12.299 12.299 0 01-1.873.892.077.077 0 00-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 00.084.028 19.839 19.839 0 006.002-3.03.077.077 0 00.032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 00-.031-.03zM8.02 15.33c-1.182 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.095 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.095 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/></svg>
+          Discord
+        </a>
+        <a href="mailto:info@adorbistech.com" title="Email">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          Email
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<script>
+const io=new IntersectionObserver((es)=>es.forEach(e=>e.isIntersecting&&e.target.classList.add('in')),{threshold:0.1});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+const mt=document.getElementById('mobToggle'), mm=document.getElementById('mobMenu');
+if(mt&&mm){mt.addEventListener('click',()=>mm.classList.toggle('open'));mm.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>mm.classList.remove('open')));}
+</script>
+
+</body>
+</html>

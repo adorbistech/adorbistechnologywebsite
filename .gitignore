@@ -1,0 +1,47 @@
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Python build artifacts (from initial generation scripts)
+__pycache__/
+*.pyc
+*.pyo
+
+# Node (if tooling added later)
+node_modules/
+npm-debug.log*
+
+# Build artifacts / temp
+*.zip
+*.tar.gz
+/tmp/
+dist/
+build/
+
+# Logs
+*.log
+logs/
+
+# Environment files — never commit credentials
+.env
+.env.local
+.env.production
+*.pem
+*.key
+
+# Scripts I ran in the sandbox (not part of the deployed site)
+_strip_base64.py
+_build_*.py
+_template.py
+_regen_*.py
+
+# Local preview index (optional — uncomment if you want to keep this private)
+# _preview.html
