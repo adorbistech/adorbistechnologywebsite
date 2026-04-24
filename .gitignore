@@ -45,3 +45,6 @@ _regen_*.py
 
 # Local preview index (optional — uncomment if you want to keep this private)
 # _preview.html
+
+# Brand reference files (local-only, not used on site)
+assets/logo/
