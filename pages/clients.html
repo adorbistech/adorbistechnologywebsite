@@ -83,7 +83,7 @@ nav.top .back-btn:hover{transform:translateY(-1px);box-shadow:0 10px 24px -6px r
 .mob-menu.open{display:block}
 @media(max-width:920px){.mob-toggle{display:flex}}
 
-.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 24px;border-radius:999px;font-size:14px;font-weight:500;letter-spacing:-0.01em;transition:transform .35s var(--ease),box-shadow .35s var(--ease)}
+.btn{position:relative;z-index:2;cursor:pointer;display:inline-flex;align-items:center;gap:10px;padding:14px 24px;border-radius:999px;font-size:14px;font-weight:500;letter-spacing:-0.01em;transition:transform .35s var(--ease),box-shadow .35s var(--ease)}
 .btn-primary{background:var(--adorbis-blue-hi);color:#FFFFFF;box-shadow:0 12px 42px -10px rgba(26,157,255,0.45),inset 0 -1px 0 rgba(0,0,0,0.2);font-weight:600}
 .btn-primary:hover{transform:translateY(-2px);box-shadow:0 20px 52px -10px rgba(79,185,255,0.6);background:var(--adorbis-blue)}
 .btn-ghost{border:1px solid var(--line-2);color:var(--ink);background:rgba(255,255,255,0.02)}
@@ -332,7 +332,7 @@ footer{border-top:1px solid var(--line);padding:64px 0 32px;margin-top:60px;posi
     <h1 class="reveal">Your data never<br/>leaves <em style="color:var(--ink-dim);font-style:italic">your walls.</em></h1>
     <p class="sub reveal">We work exclusively under mutual non-disclosure agreement. We don't publish client names. We don't share screenshots. We don't train models on your data. This page explains how we build trust without violating it.</p>
     <div class="ctas reveal">
-      <a href="mailto:info@adorbistech.com" class="btn btn-primary">Book AI Consultation <span class="arrow">↗</span></a>
+      <a href="https://www.adorbistech.com/contact" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Book AI Consultation <span class="arrow">&rarr;</span></a>
       <a href="https://www.adorbistechnology.com/" class="btn btn-ghost">← Back to Home</a>
     </div>
   </div>
@@ -414,7 +414,7 @@ footer{border-top:1px solid var(--line);padding:64px 0 32px;margin-top:60px;posi
       <h2>Sign the NDA.<br/><em style="color:var(--ink-dim);font-style:italic">Then let's actually talk.</em></h2>
       <p>First step: email us a short description of what you want to build. We reply within 24 hours. Mutual NDA before any technical details are shared.</p>
       <div class="ctas">
-        <a href="mailto:info@adorbistech.com" class="btn btn-primary">Email info@adorbistech.com <span class="arrow">↗</span></a>
+        <a href="https://www.adorbistech.com/contact" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Book AI Consultation <span class="arrow">&rarr;</span></a>
         <a href="https://www.adorbistechnology.com/" class="btn btn-ghost">← Back to Home</a>
       </div>
     </div>
