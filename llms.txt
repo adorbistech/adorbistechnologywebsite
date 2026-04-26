@@ -1,0 +1,41 @@
+﻿# Adorbis Technology
+
+> AI infrastructure company. NDA-first. DPIIT-recognized startup (DIPP52616). Operating since 2019. Two entities: Adorbis Technology Pvt Ltd (Hyderabad, India) and Adorbis LLC (Sheridan, Wyoming, USA). Wix Marketplace Partner and Shopify Partner.
+
+We design custom AI models, automate workflows, deploy private LLM infrastructure, build AI-native eCommerce stores, and develop SaaS applications for businesses that prioritize data control and confidentiality.
+
+## Capabilities
+
+- [AI Model Training and Fine-Tuning](https://adorbistechnology.com/pages/model-training.html): Custom-trained Llama, Mistral, Qwen, DeepSeek models on proprietary data
+- [AI Workflow Automation](https://adorbistechnology.com/pages/workflow-automation.html): n8n, LangGraph, Temporal orchestration on client infrastructure
+- [Private LLM Deployment](https://adorbistechnology.com/pages/private-llms.html): On-premise and private-cloud LLM infrastructure with full audit trails
+- [AI Infrastructure Setup](https://adorbistechnology.com/pages/ai-infrastructure.html): GPU clusters, vector databases, observability, guardrails
+- [AI Software Enhancement](https://adorbistechnology.com/pages/ai-enhancement.html): Upgrade existing enterprise software (CRM, ERP, accounting) with AI plugins instead of replacing
+- [eCommerce Development](https://adorbistechnology.com/pages/ecommerce.html): Wix and Shopify Partner. AI-native catalog, GEO/SEO, marketplace automation
+- [SaaS Application Development](https://adorbistechnology.com/pages/saas.html): AI-native B2B and consumer SaaS, full-stack engineering
+
+## Industries
+
+[11 verticals covered](https://adorbistechnology.com/pages/industries.html): Finance and Banking, Retail and eCommerce, Transport and Logistics, Medical Research, Education Technology, Hospitals and Clinics, Schools and K-12, Chartered Accountants and CPAs, Architecture and Design Firms, Manufacturing Industries, Factories and Plant Operations.
+
+## Company
+
+- [About](https://adorbistechnology.com/pages/about.html): Dual-entity structure, DPIIT recognition, 6+ years operating, philosophy
+- [Founder](https://adorbistechnology.com/pages/founder.html): CEO and Co-founder background, LinkedIn, Discord community
+- [Clients and Trust](https://adorbistechnology.com/pages/clients.html): NDA-first engagement framework, reference-on-request
+- [Process](https://adorbistechnology.com/pages/process.html): Three-phase engagement model with fixed scope and timeline
+- [Contact](https://adorbistechnology.com/pages/contact.html): info@adorbistech.com, Hyderabad office, Wyoming entity
+
+## Resources
+
+- [Documentation](https://adorbistechnology.com/pages/docs.html)
+- [Security and Compliance](https://adorbistechnology.com/pages/security.html): GDPR, DPDP, HIPAA, SOC 2 frameworks
+- [Privacy Policy](https://adorbistechnology.com/pages/privacy.html)
+
+## Contact
+
+Email: info@adorbistech.com
+Phone: +91 63016 44963
+Address: 1st floor, Hitech City Rd, Kondapur, Hyderabad - 500084, Telangana, India
+US entity: Adorbis LLC, Sheridan, Wyoming, USA
+LinkedIn: https://www.linkedin.com/in/syed-suhail-dastgir-a216633b/
